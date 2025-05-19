@@ -1,0 +1,1 @@
+manee: str = "https://www.stellarcard.io/ru"
