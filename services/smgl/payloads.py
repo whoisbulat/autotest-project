@@ -11,7 +11,7 @@ class Payloads:
     "metadata": "платеж через alipay"
     }
 
-    get_session = {
-        "session_id": session
+    status_session = {
+        "session_id": "ps_516607976"
     }
 

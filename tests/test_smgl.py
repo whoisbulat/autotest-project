@@ -1,12 +1,15 @@
-
 from config.base_test import BaseTest
 
 
 
 class TestSmgl(BaseTest):
     def test_create_session(self):
+        self.api_smgl.create_session()
+
+
+    def test_check_session(self):
         session = self.api_smgl.create_session()
-        print(session.session.id)
+        self.api_smgl.status_session(session)
 
 
 
