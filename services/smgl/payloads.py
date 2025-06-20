@@ -12,6 +12,6 @@ class Payloads:
     }
 
     status_session = {
-        "session_id": "ps_516607976"
+        "session_id": session_id
     }
 
