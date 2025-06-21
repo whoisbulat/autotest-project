@@ -20,16 +20,17 @@ class SmglAPI(Helper):
         response = requests.post(
             url=self.endpoints.create_session,
             headers=self.headers.basic,
-            json=self.payloads.create_session
+            json=self.payloads.create_session()
         )
         assert response.status_code == 200, response.json()
         model = CreateSessionResponseModel(**response.json())
         return model
 
-    def status_session(self):
+    def status_session(self, session_id):
         response = requests.post(
             url=self.endpoints.status_session,
             headers=self.headers.basic,
-            json=self.payloads.status_session
+            json=self.payloads.status_session(session_id)
         )
-        assert response.status_code == 200, response.json()
+        return response.json()
+
