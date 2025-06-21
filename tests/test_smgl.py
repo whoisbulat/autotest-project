@@ -11,7 +11,7 @@ class TestSmgl(BaseTest):
 
     def test_check_session(self):
         session = self.api_smgl.create_session()
-        test = self.api_smgl.status_session(session.session.id)
+        self.api_smgl.status_session(session.session.id)
 
 
 

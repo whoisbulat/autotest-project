@@ -32,5 +32,6 @@ class SmglAPI(Helper):
             headers=self.headers.basic,
             json=self.payloads.status_session(session_id)
         )
+        assert response.status_code == 200, response.json()
         return response.json()
 
